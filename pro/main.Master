@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="pro.main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            width: 1300px;
+            height: 450px;
+        }
+        .style2
+        {
+            width: 1300px;
+            height: 139px;
+        }
+        .style3
+        {
+            width: 1295px;
+            height: 55px;
+        }
+        .style4
+        {
+            width: 966px;
+            height: 451px;
+        }
+        .style5
+        {
+            height: 451px;
+        }
+        .style6
+        {
+            height: 188px;
+        }
+    </style>
+</head>
+<body background="images/d1.jpg">
+    <form id="form1" runat="server">
+    <div>
+        <table class="style1" width="1300px">
+            <tr>
+                <td colspan="3" align="center" class="style6">
+                    <img alt="Header" class="style2" src="images/head1.jpg" />
+                    
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                         <ContentTemplate>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
+                            <asp:Timer ID="Timer1" runat="server" Interval="100">
+                            </asp:Timer>
+                            <asp:Label ID="Label1" runat="server" Font-Names="Arial Rounded MT Bold" 
+                                Font-Size="XX-Large"></asp:Label>
+                        </ContentTemplate>
+                      </asp:UpdatePanel>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    <br />
+                    <asp:ImageButton ID="ImageButton1" runat="server" 
+                        ImageUrl="~/images/home.jpg" onclick="ImageButton1_Click" />
+                    <br />
+                    <br />
+                    <asp:ImageButton ID="singleButton" runat="server" ImageAlign="Middle" 
+                        ImageUrl="~/images/single1.jpg" onclick="singleButton_Click" />
+                    <br />
+                    <br />
+                    <asp:ImageButton ID="doubleButton" runat="server" ImageAlign="Middle" 
+                        ImageUrl="~/images/double1.jpg" onclick="doubleButton_Click" />
+                    <br />
+                    <br />
+                    <br />
+                </td>
+                <td class="style4">
+                               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                               </asp:ContentPlaceHolder>
+                    </td>
+                <td class="style5">
+                    <asp:ImageButton ID="chartButton" runat="server" ImageAlign="Middle" 
+                        ImageUrl="~/images/login.jpg" onclick="chartButton_Click" />
+                    <br />
+                    <br />
+                    <asp:ImageButton ID="helpButton" runat="server" ImageUrl="~/images/rules1.jpg" 
+                        onclick="helpButton_Click" />
+                    <br />
+                    <br />
+                    <asp:ImageButton ID="careButton" runat="server" ImageAlign="Middle" 
+                        ImageUrl="~/images/customer1.jpg" onclick="careButton_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <img alt="Footer" class="style3" src="images/footer1.jpg" /></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
